@@ -19,6 +19,7 @@ export function MyProvider(props) {
   const [num, setNum] = useState(1);
   const [extraField, setExtraField] = useState("");
 
+  console.log("questionList", questionList);
   const deleteQuestionFunction= useCallback((id)=> {
     questionList.pop();
     const newArray = questionList.map((item) => item);
@@ -31,10 +32,10 @@ export function MyProvider(props) {
     setQuestionList([
       ...questionList,
       {
-        serialNo: `"${serialNo}"`,
-        question: `"${question}"`,
-        num: `"${num}"`,
-        extraField: `"${extraField}"`,
+        serialNo: `${serialNo}`,
+        question: `${question}`,
+        num: `${num}`,
+        extraField: `${extraField}`,
       },
     ]);
     setSerialNo("");
@@ -108,11 +109,12 @@ export function MyProvider(props) {
         singleCharacterOfKey === "." ||
         singleCharacterOfKey === "/" ||
         singleCharacterOfKey === "’" ||
-        singleCharacterOfKey === "-"
+        singleCharacterOfKey === "-" ||
+        singleCharacterOfKey === "'"
       ) {
         randomKeyOfSingleQuestion = randomKeyOfSingleQuestion.replace(
           singleCharacterOfKey,
-          ""
+          ''
         );
       }
     }

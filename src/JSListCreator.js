@@ -1,10 +1,13 @@
-function JsListCreator({dataKeyArray }) {
+function JsListCreator({ dataKeyArray }) {
+  let tempString = "";
+  for (let item of dataKeyArray) {
+    tempString =
+      `${tempString}${item} : "", ${item}_remarks : "", `
+  }
     return (
-      <>
-        {dataKeyArray.map((item, indx) => (
-          <div key={indx}>{`"${item}": "" , "${item}_remarks":"",`}</div>
-        ))}
-      </>
+      <div className="whiteSpace">
+        {tempString}
+      </div>
     );
   }
   export default JsListCreator
