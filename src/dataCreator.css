@@ -1,0 +1,92 @@
+*{
+    font-family:cursive
+}
+.w-100{
+    width: 700px;
+}
+.p-3{
+    
+    padding: 6px;
+}
+.p-10{
+    
+    padding: 10px;
+}
+.color{
+color: darkslategrey;
+}
+.border-none{
+    border: 2px solid beige;
+    background-color: beige;
+    color: gray;
+}
+.border-one{
+    border: 2px solid beige;
+}
+.mr-10{
+    margin-right: 10px;
+}
+input:focus{
+    background-color: snow;
+    outline: none;
+}
+.border-grey{
+    border: 1px dashed darkkhaki   ;
+}
+.p-30{
+    padding: 20px;
+}
+.mb-20{
+    
+    margin-bottom: 20px;
+}
+.mt-15{
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.mb-8{
+    margin-bottom: 8px;
+}
+.p-10{
+  padding: 8px;  
+  border-radius: 6px;
+}
+.align-center{
+    text-align: center;
+}
+.br-10{
+    border-radius: 6px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+.expandable-header {
+    cursor: pointer;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+.whiteSpace{
+    white-space: pre;
+}
+/* .expandable-content {
+    display: none;
+} */
+
+span {
+    font-size: 24px;
+    /* adjust size as needed */
+    color: #333;
+    /* adjust color as needed */
+}
