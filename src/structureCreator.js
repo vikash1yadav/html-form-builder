@@ -3,8 +3,8 @@ import { memo } from "react";
 // let emptyKeyArray = [];
 
 function StructureCreator({ serialNo, question, num, keyCreator, newAllQuestionKeyCombinationArray, extraField }) {
-  keyCreator(question);
-console.log("call fun str");
+  // keyCreator(question);
+  
   /*for input*/
   const structureHTML = `
     <div class="section">

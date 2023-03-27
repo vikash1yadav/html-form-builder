@@ -52,9 +52,9 @@ export function MyProvider(props) {
     if (showHTML) {
       newAllQuestionKeyCombinationArray = [];
       setnewAllQuestionKeyCombinationArray(newAllQuestionKeyCombinationArray);
-      // for (const item of questionList) {
-      //   // keyCreator(item.question)
-      // }
+      for (const item of questionList) {
+        keyCreator(item.question)
+      }
     } else {
       newAllQuestionKeyCombinationArray = [];
       setnewAllQuestionKeyCombinationArray(newAllQuestionKeyCombinationArray);
@@ -64,7 +64,7 @@ export function MyProvider(props) {
   }
   
   const keyCreator=useCallback((keyquestion)=> {
-    console.log("checking call for keyCreator");
+    // console.log("checking call for keyCreator");
     let singleQuestionKeyCombinationArray = [];
     let wordsArray = keyquestion.split(" ");
     for (let index = 0; index < nonKeyWords.length; index++) {
@@ -120,12 +120,12 @@ export function MyProvider(props) {
     }
 
     if (!newAllQuestionKeyCombinationArray.includes(randomKeyOfSingleQuestion)) {
-      console.log("check 1", randomKeyOfSingleQuestion);
+      // console.log("check 1", randomKeyOfSingleQuestion);
       newAllQuestionKeyCombinationArray.push(randomKeyOfSingleQuestion);
       // newAllQuestionKeyCombinationArray=[...newAllQuestionKeyCombinationArray, randomKeyOfSingleQuestion]
       setnewAllQuestionKeyCombinationArray(newAllQuestionKeyCombinationArray);
     } else {
-      console.log("check else", singleQuestionKeyCombinationArray, randomKeyOfSingleQuestion);
+      // console.log("check else", singleQuestionKeyCombinationArray, randomKeyOfSingleQuestion);
       newAllQuestionKeyCombinationArray.push(
         singleQuestionKeyCombinationArray.length === 0
           ? "Enter_your_key"
@@ -135,7 +135,7 @@ export function MyProvider(props) {
     }
   }, [newAllQuestionKeyCombinationArray])
 
-  console.log("check", newAllQuestionKeyCombinationArray);
+  // console.log("check", newAllQuestionKeyCombinationArray);
 
   const handleQuestionChange = (e) => {
     switch (e.target.name) {
