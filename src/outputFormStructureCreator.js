@@ -14,7 +14,7 @@ function OutputFormStructureCreator({ serialNo, question, num, extraField, empty
                        <div class="column w-5 align-center">
                            <span class="font-style">${serialNo} </span>
                        </div>
-                       <div class="column w-45  align-left">
+                       <div class="column w-80  align-left">
                            <p>${question}</p>
                        </div>
                        <div class="column w-15 align-center">
@@ -22,11 +22,7 @@ function OutputFormStructureCreator({ serialNo, question, num, extraField, empty
                              emptyKeyArray[num - 1]
                            } || "" %></span>
                        </div>
-                       <div class="column w-35 align-left">
-                           <p remark_normal><%- data?.${
-                             emptyKeyArray[num - 1]
-                           }_remark || "" %></p>
-                       </div>
+                       
                    </div>
                </div>
                `;
@@ -37,3 +33,10 @@ function OutputFormStructureCreator({ serialNo, question, num, extraField, empty
   );
 }
 export default memo(OutputFormStructureCreator);
+
+
+{/* <div class="column w-35 align-left">
+                           <p remark_normal><%- data?.${
+                             emptyKeyArray[num - 1]
+                           }_remark || "" %></p>
+                       </div> */}

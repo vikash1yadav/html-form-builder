@@ -15,13 +15,8 @@ function StructureCreator({ serialNo, question, num, keyCreator, newAllQuestionK
                 <div class="col-11">
                   <label class="ors-form-label">${question}</label>
                   <div class="rows">
-                    <div class="col-3 main-radio" data-fieldtype="radio-group" data-bind="foreach:{
-                        data:[
-                          {id:'yes',label:'Yes'},
-                          {id:'no',label:'No'}
-                        ],
-                        as:'option'
-                      }">
+                    <div class="col-3 main-radio" data-fieldtype="radio-group" data-bind="foreach:{ data:[ {id:'yes',label:'Yes'}, {id:'not',label:'Not'}, {id:'no',label:'No'},
+                    {id:'na',label:'NA'}, {id:'p',label:'P'} ], as:'option' }">
                       <div class="radio-common"
                         data-bind="css:{'selected':vm.formData.${newAllQuestionKeyCombinationArray[num - 1]
     }()===option.id}">
@@ -40,14 +35,6 @@ function StructureCreator({ serialNo, question, num, keyCreator, newAllQuestionK
     }'+'-'+option.id}"></label>
                       </div>
                     </div>
-                    <div class="col-9 ors-form-control textarea-input p-0" data-fieldtype="textarea">
-                      <textarea class="textarea-text" name="${newAllQuestionKeyCombinationArray[num - 1]
-    }_remarks"
-                        placeholder="Remarks by Auditor" style="height: 30px;"
-                        data-bind="expandable:{min:1},value:vm.formData.${newAllQuestionKeyCombinationArray[num - 1]
-    }_remarks,attr:{readonly:vm.isReadOnlyField('${newAllQuestionKeyCombinationArray[num - 1]
-    }_remarks')}"></textarea>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -59,6 +46,16 @@ function StructureCreator({ serialNo, question, num, keyCreator, newAllQuestionK
     </>
   );
 }
+
+{/* <div class="col-9 ors-form-control textarea-input p-0" data-fieldtype="textarea">
+<textarea class="textarea-text" name="${newAllQuestionKeyCombinationArray[num - 1]
+}_remarks"
+  placeholder="Remarks by Auditor" style="height: 30px;"
+  data-bind="expandable:{min:1},value:vm.formData.${newAllQuestionKeyCombinationArray[num - 1]
+}_remarks,attr:{readonly:vm.isReadOnlyField('${newAllQuestionKeyCombinationArray[num - 1]
+}_remarks')}"></textarea>
+</div> */}
+
 // export default StructureCreator;
 
 export default memo(StructureCreator);
