@@ -15,8 +15,7 @@ function StructureCreator({ serialNo, question, num, keyCreator, newAllQuestionK
                 <div class="col-11">
                   <label class="ors-form-label">${question}</label>
                   <div class="rows">
-                    <div class="col-3 main-radio" data-fieldtype="radio-group" data-bind="foreach:{ data:[ {id:'yes',label:'Yes'}, {id:'not',label:'Not'}, {id:'no',label:'No'},
-                    {id:'na',label:'NA'}, {id:'p',label:'P'} ], as:'option' }">
+                    <div class="col-3 main-radio" data-fieldtype="radio-group" data-bind="foreach:{ data:[ {id:'yes',label:'Yes'}, {id:'no',label:'No'} ], as:'option' }">
                       <div class="radio-common"
                         data-bind="css:{'selected':vm.formData.${newAllQuestionKeyCombinationArray[num - 1]
     }()===option.id}">
