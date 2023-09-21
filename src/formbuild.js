@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useRef } from "react";
 import  { useMyProvider } from "./data";
 import JsListCreator from "./JSListCreator";
 import KeyListCreator from "./KeyListCreator";
@@ -14,6 +14,7 @@ function Formbuild() {
   const { questionList, newAllQuestionKeyCombinationArray, keyCreator } = useMyProvider();
   const questionsArray = questionList;
   // setnewAllQuestionKeyCombinationArray([]);
+  const outputFormRef = useRef(null);
   return (
     <>
       <div>
@@ -43,8 +44,8 @@ function Formbuild() {
 
         <div className="mb-8 mt-15 color">
           OUTPUT FORM HTML STRUCTURE</div>
-        <ExpandableComponent title={"OUTPUT FORM HTML STRUCTURE"}>
-        <div>
+        <ExpandableComponent title={"OUTPUT FORM HTML STRUCTURE"} divRef={outputFormRef}>
+        <div ref={outputFormRef} >
           {questionsArray.map((item) => (
             <>
               <div key={item.num} className="border-grey mb-8 p-10">

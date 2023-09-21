@@ -14,15 +14,15 @@ function OutputFormStructureCreator({ serialNo, question, num, extraField, empty
                        <div class="column w-5 align-center">
                            <span class="font-style">${serialNo} </span>
                        </div>
-                       <div class="column w-45  align-left">
+                       <div class="column w-60  align-left">
                            <p>${question}</p>
                        </div>
-                       <div class="column w-15 align-center">
+                       <div class="column w-10 align-center">
                            <span class="value_text"><%- data?.${
                              emptyKeyArray[num - 1]
                            } || "" %></span>
                        </div>
-                       <div class="column w-35 align-left">
+                       <div class="column w-25 align-left">
                            <p remark_normal><%- data?.${
                              emptyKeyArray[num - 1]
                            }_remark || "" %></p>
