@@ -28,5 +28,9 @@ export const nonKeyWords = [
     "they",
     "per",
     ";",
-    "*"
+    "*",
+    "⬜",
+    "..",
+    "...",
+    "/"
 ];

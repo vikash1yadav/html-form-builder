@@ -40,14 +40,6 @@ function StructureCreator({ serialNo, question, num, keyCreator, newAllQuestionK
     }'+'-'+option.id}"></label>
                       </div>
                     </div>
-                    <div class="col-9 ors-form-control textarea-input p-0" data-fieldtype="textarea">
-                      <textarea class="textarea-text" name="${newAllQuestionKeyCombinationArray[num - 1]
-    }_remarks"
-                        placeholder="Remarks by Auditor" style="height: 30px;"
-                        data-bind="expandable:{min:1},value:vm.formData.${newAllQuestionKeyCombinationArray[num - 1]
-    }_remarks,attr:{readonly:vm.isReadOnlyField('${newAllQuestionKeyCombinationArray[num - 1]
-    }_remarks')}"></textarea>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -63,3 +55,12 @@ function StructureCreator({ serialNo, question, num, keyCreator, newAllQuestionK
 
 export default memo(StructureCreator);
 
+
+{/* <div class="col-9 ors-form-control textarea-input p-0" data-fieldtype="textarea">
+<textarea class="textarea-text" name="${newAllQuestionKeyCombinationArray[num - 1]
+}_remarks"
+  placeholder="Remarks by Auditor" style="height: 30px;"
+  data-bind="expandable:{min:1},value:vm.formData.${newAllQuestionKeyCombinationArray[num - 1]
+}_remarks,attr:{readonly:vm.isReadOnlyField('${newAllQuestionKeyCombinationArray[num - 1]
+}_remarks')}"></textarea>
+</div> */}
