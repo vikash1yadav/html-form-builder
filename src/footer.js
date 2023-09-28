@@ -16,7 +16,7 @@ function Footer() {
         fontSize:"8px"
       }}
     >
-      Made to make your life easy from Shailesh ✌✌✌
+      Made to make your life easy from vikas ✌✌✌
     </div>
   );
 }
